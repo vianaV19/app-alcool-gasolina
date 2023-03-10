@@ -1,20 +1,64 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true" class="ion-padding">
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-grid fixed>
+    <ion-row class="ion-justify-content-center">
+      <img src="../../assets/logo.png" alt="logo">
+    </ion-row>
+  </ion-grid>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <h3 class="ion-text-center">Saiba qual é a melhor opção para o abastecimento do seu carro.</h3>
+
+  <ion-grid id="input-wrapper" fixed>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12">
+        <ion-label>Preço do Álcool. <small>Ex.: 1,90</small> </ion-label>
+        <ion-input [(ngModel)]="alcool" type="number" placeholder="Insira o valor"></ion-input>
+      </ion-col>
+      <ion-col size="12">
+        <ion-label>Preço da Gasolina. <small>Ex.: 2,30</small> </ion-label>
+        <ion-input [(ngModel)]="gasolina" type="number" placeholder="Insira o valor"></ion-input>
+      </ion-col>
+      <ion-col size="12">
+        <ion-button color="primary" (click)="calcular()" expand="full">
+          Calcular
+        </ion-button>
+
+        <p class="ion-text-center">
+          {{ resultado }}
+        </p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <h3 class="ion-text-center">Calculo de Kilometros Rodados</h3>
+
+  <ion-grid id="input-wrapper" fixed>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12">
+        <ion-label>Kilometros. <small>Ex.: 50</small> </ion-label>
+        <ion-input [(ngModel)]="km" type="number" placeholder="Insira o valor"></ion-input>
+      </ion-col>
+      <ion-col size="12">
+        <ion-label>Preço Médio. <small>Ex.: R$20,50</small> </ion-label>
+        <ion-input [(ngModel)]="precoMedio" type="number" placeholder="Insira o valor"></ion-input>
+      </ion-col>
+      <ion-col size="12">
+        <ion-button color="primary" (click)="calcularKmRodados()" expand="full">
+          Calcular
+        </ion-button>
+
+        <p class="ion-text-center">
+          {{ resKmRodado }}
+        </p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
+
+<ion-footer [translucent]="true">
+  <p class="ion-text-center">
+    <small>
+      by Matheus Viana | Web Developer & Webdesign
+   </small>
+  </p>
+</ion-footer>
