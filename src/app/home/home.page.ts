@@ -9,7 +9,7 @@ export class HomePage {
 
   alcool!:number; gasolina!:number; resultado:string = "Resultado!";
 
-  km!:number; precoMedio!:number; resKmRodado:string = "Resultado: R$0,00" ;
+  km!:number; precoMedio!:number; resKmRodado:string = "Resultado: R$ 0,00" ;
 
   constructor() {}
 
